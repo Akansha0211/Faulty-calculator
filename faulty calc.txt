@@ -1,0 +1,37 @@
+#Faulty Calculator
+#Design a calculator which will perform all operations except the following:
+# 45*3=555 , 56+9=77, 56/6=4
+#Take the opeator and two numbers from user and return the result
+def calc():
+    num1=int(input("Enter your first number"))
+    num2=int(input("Enter second number"))
+    operator=input("Enter your operator")
+    if operator=="*":
+        if num1==45 and num2==3:
+            print("45*3=555")
+        else:
+            print(num1*num2)
+    if operator=="+":
+        if num1==56 and num2==9:
+            print("num1+num2=77")
+        else:
+            print(num1+num2)
+    if operator=="/":
+        if num1==56 and num2==6:
+            print("56/6=4")
+        else:
+            print(num1/num2)
+    again()
+
+def again():
+    calc_again=input("Enter y if you want to do calculatrions again or else type n for no")
+    if calc_again=="y":
+        print("Ok Great")
+        calc()
+    if calc_again=="n":
+        print("See you later")
+    else:
+        again()
+calc()
+
+
